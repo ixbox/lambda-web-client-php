@@ -13,6 +13,7 @@
         "guzzle",
         "psr-18"
     ],
+    "license": "MIT",
     "authors": [
         {
             "name": "ixbox"
@@ -51,7 +52,7 @@
         "cs": "phpcs",
         "cs:fix": "phpcbf",
         "check": [
-            "@composer validate",
+            "@composer validate --strict",
             "@cs",
             "@analyse",
             "@test"

@@ -412,4 +412,4 @@ php examples/get.php
 
 ## ライセンス
 
-未定です（LICENSE ファイルはまだありません）。
+[MIT License](LICENSE)
