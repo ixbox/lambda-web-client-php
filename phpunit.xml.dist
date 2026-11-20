@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         cacheDirectory=".phpunit.cache"
+         colors="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         failOnDeprecation="true"
+         failOnPhpunitDeprecation="true"
+         beStrictAboutOutputDuringTests="true">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+    <php>
+        <!-- Keep the SDK away from real AWS configuration and IMDS during tests. -->
+        <env name="AWS_CONFIG_FILE" value="/dev/null/nonexistent-config" force="true"/>
+        <env name="AWS_SHARED_CREDENTIALS_FILE" value="/dev/null/nonexistent-credentials" force="true"/>
+        <env name="AWS_EC2_METADATA_DISABLED" value="true" force="true"/>
+        <env name="AWS_PROFILE" value="" force="true"/>
+    </php>
+</phpunit>
