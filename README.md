@@ -20,7 +20,7 @@ HTTP 通信には [Guzzle 7](https://github.com/guzzle/guzzle) を使います�
 
 ## 動作要件
 
-- PHP 8.3 以上（CI では 8.3 / 8.4 / 8.5 でテストしています）
+- PHP 8.3 以上（CI では 8.3 / 8.4 / 8.5 / 8.6 でテストしています）
 - `aws/aws-sdk-php` ^3.402
 - `guzzlehttp/guzzle` ^7.15.2
 
